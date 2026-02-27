@@ -1,0 +1,276 @@
+/* OctoFit Tracker – global styles */
+
+:root {
+  --octofit-primary:      #43e97b;
+  --octofit-primary-mid:  #38f9d7;
+  --octofit-accent:       #21c08b;
+  --octofit-accent-dark:  #1aaa72;
+  --octofit-accent-light: #e8fff5;
+  --octofit-danger:       #e05a5a;
+  --octofit-warning:      #f0a500;
+  --octofit-light-bg:     #f6fff9;
+  --octofit-card-shadow:  0 2px 10px rgba(0, 0, 0, 0.10);
+  --octofit-text:         #222;
+  --octofit-text-muted:   #4a7a62;
+}
+
+body {
+  background-color: #f6fff9;
+  min-height: 100vh;
+  color: var(--octofit-text);
+}
+
+a {
+  color: var(--octofit-accent-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--octofit-accent);
+  text-decoration: underline;
+}
+
+/* ── Navbar ─────────────────────────────────────────── */
+.octofit-navbar {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%) !important;
+  box-shadow: 0 3px 10px rgba(33,192,139,0.30);
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.octofit-navbar .navbar-brand {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #222 !important;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.octofit-navbar .navbar-brand img {
+  height: 36px;
+  width: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.octofit-navbar .nav-link {
+  color: rgba(0,0,0,0.70) !important;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem !important;
+  border-radius: 6px;
+  transition: background 0.18s, color 0.18s;
+}
+
+.octofit-navbar .nav-link:hover {
+  color: #222 !important;
+  background: rgba(255,255,255,0.35);
+}
+
+.octofit-navbar .nav-link.active {
+  color: #fff !important;
+  background-color: var(--octofit-accent) !important;
+  font-weight: 700;
+}
+
+/* ── Page heading ───────────────────────────────────── */
+.octofit-page-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--octofit-text);
+  border-left: 5px solid var(--octofit-accent);
+  padding-left: 0.75rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.2px;
+}
+
+/* ── Cards ──────────────────────────────────────────── */
+.octofit-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--octofit-card-shadow);
+  overflow: hidden;
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #222;
+  border-radius: 0 !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  padding: 0.75rem 1.1rem;
+}
+
+/* ── Tables ─────────────────────────────────────────── */
+.octofit-table {
+  font-size: 0.93rem;
+}
+
+.octofit-table thead th {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #222;
+  border-color: #21c08b;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 0.75rem 1rem;
+  letter-spacing: 0.2px;
+}
+
+.octofit-table tbody tr {
+  transition: background 0.12s;
+}
+
+.octofit-table tbody tr:hover {
+  background-color: #d4f7e8 !important;
+}
+
+.octofit-table tbody td {
+  vertical-align: middle;
+  padding: 0.65rem 1rem;
+  color: var(--octofit-text);
+}
+
+.octofit-table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.octofit-table tbody tr:nth-child(even) {
+  background-color: #f8fbfd;
+}
+
+/* ── Rank badge ─────────────────────────────────────── */
+.rank-badge {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background-color: var(--octofit-accent);
+  color: #fff;
+}
+
+.rank-badge.gold   { background-color: #f5a623; color: #fff; }
+.rank-badge.silver { background-color: #9b9b9b; color: #fff; }
+.rank-badge.bronze { background-color: #b87333; color: #fff; }
+
+/* ── Workout cards ──────────────────────────────────── */
+.workout-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--octofit-card-shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.workout-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.13);
+}
+
+.workout-card .card-header {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #222;
+  border-radius: 10px 10px 0 0 !important;
+  font-weight: 600;
+}
+
+.workout-card .badge-exercise {
+  background-color: rgba(67,233,123,0.18);
+  color: var(--octofit-accent-dark);
+  border: 1px solid var(--octofit-accent);
+  border-radius: 20px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ── Hero / Banner section ──────────────────────────── */
+.octofit-hero {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #222;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(33,192,139,0.25);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', 'Roboto', 'Inter', Arial, sans-serif;
+  margin-bottom: 2rem;
+}
+
+.octofit-hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, rgba(255,255,255,0.30) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.octofit-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  font-family: 'Segoe UI', 'Roboto', 'Inter', Arial, sans-serif;
+  margin: 0.5rem 0;
+}
+
+.octofit-hero p.lead {
+  color: rgba(0,0,0,0.70);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.octofit-hero .hero-logo {
+  height: 64px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  border: 3px solid #fff;
+  margin-bottom: 0.75rem;
+}
+
+/* Buttons */
+.btn-octofit {
+  background-color: var(--octofit-accent);
+  border-color: var(--octofit-accent);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.45rem 1.2rem;
+  transition: background 0.18s, transform 0.1s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(33,192,139,0.30);
+}
+
+.btn-octofit:hover {
+  background-color: var(--octofit-accent-dark);
+  border-color: var(--octofit-accent-dark);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(33,192,139,0.40);
+}
+
+/* ── Stat cards on home ─────────────────────────────── */
+.stat-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--octofit-card-shadow);
+  transition: transform 0.15s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card .stat-icon {
+  font-size: 2.2rem;
+}
